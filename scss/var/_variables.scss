@@ -1,1 +1,15 @@
-$new-color: green
+$new-color: green;
+$bg: ninguno;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin bg-header-footer {
+    background-color: black;
+    color: white;
+    height: 20vh;
+    padding: 3rem 0rem;
+}

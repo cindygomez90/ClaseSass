@@ -1,3 +1,9 @@
+@import "../var/variables";
+
+h2 {
+    color: $new-color;
+}
+
 @media (min-width: 768px) {
     .grid-padre {
         display: grid;
@@ -12,8 +18,33 @@
     }
 }
 
+.grid-padre {
+    @if $bg == verano {
+        background-color: orange;
+        color: white;
+    } @else if $bg == invierno {
+        background-color: aquamarine;
+    } @else {
+        background-color: white;
+    }
+}
+
 .hijo {
     img {
         min-width: 80rem/2;
     }
+}
+
+.btn {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.btn-agotado {
+    @extend .btn;
+    text-transform: uppercase;
+    background-color: yellow;
+    color: black;
 }
